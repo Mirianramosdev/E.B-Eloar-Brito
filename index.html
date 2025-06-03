@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eloar Brito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #f8bbd0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    header p {
+      margin: 10px 0;
+    }
+
+    header a {
+      background-color: #f8bbd0;
+      color: black;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .carrossel {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carrossel img {
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      scroll-snap-align: start;
+      border: 2px solid #f8bbd0;
+      flex-shrink: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      text-align: left;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      background: #222;
+      color: #f8bbd0;
+    }
+
+    button {
+      background-color: #f8bbd0;
+      color: black;
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #f8bbd0;
+    }
+
+    @media (max-width: 600px) {
+      .carrossel img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho com LOGO -->
+  <header>
+    <img src="https://i.postimg.cc/vBdzZqqL/Logotipo-sobre-nail-designer-elegante-marrom-1.png" alt="Logo Beleza Rosa" />
+    <p>Design de Sobrancelhas | Tranças | Penteados</p>
+    <a href="#agendamento">Agendar agora</a>
+  </header>
+
+  <!-- Serviços e Preços -->
+  <section style="background-color: #1c1c1c;">
+    <h2>Serviços e Preços</h2>
+    <ul>
+      <li>✔️ Design de sobrancelhas – Com Henna R$25,00 | Simples R$15,00</li>
+      <li>✔️ Tranças – VALOR A COMBINAR</li>
+      <li>✔️ Penteados – R$ 80,00</li>
+    </ul>
+  </section>
+
+  <!-- Galeria -->
+  <section>
+    <h2>Galeria de Trabalhos</h2>
+    <div class="carrossel">
+      <img src="https://i.postimg.cc/3JTGGQ9G/b0277ac8-4b39-495e-9263-42633a6f706c.jpg" alt="Imagem 1" />
+      <img src="https://i.postimg.cc/kXYnmxV5/42665f6c-3ae1-4355-825b-615ab4b21538.jpg" alt="Imagem 2" />
+      <img src="https://i.postimg.cc/6QgcJ1Kh/b3b64bdf-4ea9-4f30-ade8-ada94bb5db60.jpg" alt="Imagem 3" />
+      <img src="https://i.postimg.cc/KvxN2M6C/238d3dc9-1d5b-472a-a49a-993989a5b576.jpg" alt="Imagem 4" />
+      <img src="https://i.postimg.cc/brT1Jm7W/a1d40b46-0c46-4463-8fed-46d8fdda7d28.jpg" alt="Imagem 5" />
+      <img src="https://i.postimg.cc/9FgqnwCd/4d6fe40f-9219-414e-91ba-6b77bdc5c415.jpg" alt="Imagem 6" />
+      <img src="https://i.postimg.cc/bw2dV66P/067247cb-294d-4791-a755-86b280febf67.jpg" alt="Imagem 7" />
+      <img src="https://i.postimg.cc/nLKm0H2B/0e2653fb-5c17-4562-89f0-16e26a47df46.jpg" alt="Imagem 8" />
+      <img src="https://i.postimg.cc/DZyS6183/f851502b-58f2-4c2e-b30c-ec79222582a1.jpg" alt="Imagem 9" />
+    </div>
+  </section>
+
+  <!-- Agendamento -->
+  <section id="agendamento">
+    <h2>Agende seu horário</h2>
+    <form id="formAgendamento">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" required placeholder="Digite seu nome completo" />
+
+      <label for="telefone">WhatsApp:</label>
+      <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx" />
+
+      <label for="servico">Selecione o serviço:</label>
+      <select id="servico" required>
+        <option value="">Escolha uma opção</option>
+        <option>Design de Sobrancelha simples</option>
+        <option>Design de Sobrancelha com Henna</option>
+        <option>Tranças simples</option>
+        <option>Tranças com mega hair</option>
+        <option>Penteado</option>
+      </select>
+
+      <label for="data">Data (segunda a sábado):</label>
+      <input type="date" id="data" required />
+
+      <label for="hora">Horário (08h às 18h):</label>
+      <select id="hora" required>
+        <option value="">Selecione um horário</option>
+        <option>08:00</option>
+        <option>09:00</option>
+        <option>10:00</option>
+        <option>11:00</option>
+        <option>12:00</option>
+        <option>13:00</option>
+        <option>14:00</option>
+        <option>15:00</option>
+        <option>16:00</option>
+        <option>17:00</option>
+        <option>18:00</option>
+      </select>
+
+      <label for="mensagem">Observações:</label>
+      <textarea id="mensagem" rows="3" placeholder="Ex: cabelo cacheado, alergias, referências..."></textarea>
+
+      <button type="submit">Enviar para WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section style="background-color: #121212;">
+    <h2>Sobre Mim</h2>
+    <p>
+      Sou especialista em realçar a beleza natural com design de sobrancelhas, tranças afro e penteados modernos.
+      Cada cliente é única, e meu compromisso é com sua autoestima.
+    </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Eloar Brito. Todos os direitos reservados.</p>
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/eloar_brito?igsh=dDBkZmNua3ZrYWlr" target="_blank">@eloar_brito</a>
+    </p>
+  </footer>
+
+  <!-- Script para validação de datas e envio para WhatsApp -->
+  <script>
+    // Bloquear domingos no calendário
+    document.getElementById('data').addEventListener('input', function () {
+      const data = new Date(this.value);
+      const diaSemana = data.getUTCDay(); // 0 = domingo
+      if (diaSemana === 0) {
+        alert("Domingos não são permitidos. Por favor, selecione um dia entre segunda e sábado.");
+        this.value = '';
+      }
+    });
+
+    // Envio para o WhatsApp
+    document.getElementById('formAgendamento').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const servico = document.getElementById('servico').value;
+      const data = document.getElementById('data').value;
+      const hora = document.getElementById('hora').value;
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !telefone || !servico || !data || !hora) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
+      }
+
+      const texto = `Olá, me chamo *${nome}*. Gostaria de agendar um horário.\n\n*Serviço:* ${servico}\n*Data:* ${data}\n*Horário:* ${hora}\n*WhatsApp:* ${telefone}\n*Observações:* ${mensagem}`;
+      const numero = "5579999667451"; // WhatsApp de Eloar
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
